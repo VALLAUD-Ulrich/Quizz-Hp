@@ -77,3 +77,17 @@ main {
   top: 45%;
   left: 4%;
 }
+
+.answer-harry,
+.answer-ron,
+.answer-hermione {
+  margin-top: 530px;
+}
+
+.global-answer {
+  margin-top: 480px;
+}
+
+.answer-ron {
+  margin-left: 30%;
+}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function GlobalAsk() {
+function Hermione() {
   return (
     <>
       <div>
@@ -27,24 +27,9 @@ function GlobalAsk() {
         </p>
       </div>
       <form action="">
-        <div className="global-answer flex flex-wrap justify-around">
-          <div>
-            <button className="py-2 px-4 mr-4 text-4xl border solid w-40 my-2">
-              Poudlard
-            </button>
-            <button className="py-2 px-4 text-4xl border solid w-40 my-2">
-              Beauxbâtons
-            </button>
-          </div>
-          <div>
-            <button className="py-2 px-4 mr-4 text-4xl border solid w-40 my-2">
-              Durmstrang
-            </button>
-            <button className="py-2 px-4 text-4xl border solid w-40 my-2">
-              Castelobruxo
-            </button>
-          </div>
-        </div>
+        <label className="flex flex-col items-center text-4xl answer-hermione">
+          Votre réponse: <input name="answer-hermione" />
+        </label>
         <div>
           <Image
             src="/balai.png"
@@ -59,4 +44,4 @@ function GlobalAsk() {
   );
 }
 
-export default GlobalAsk;
+export default Hermione;
