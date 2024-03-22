@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-function GlobalAsk() {
+function Harry() {
   return (
     <>
       <div>
@@ -26,37 +27,28 @@ function GlobalAsk() {
           Quel est le nom de l'école de sorcellerie où Harry Potter étudie ?
         </p>
       </div>
-      <form action="">
-        <div className="global-answer flex flex-wrap justify-around">
-          <div>
-            <button className="py-2 px-4 mr-4 text-4xl border solid w-40 my-2">
-              Poudlard
-            </button>
-            <button className="py-2 px-4 text-4xl border solid w-40 my-2">
-              Beauxbâtons
-            </button>
-          </div>
-          <div>
-            <button className="py-2 px-4 mr-4 text-4xl border solid w-40 my-2">
-              Durmstrang
-            </button>
-            <button className="py-2 px-4 text-4xl border solid w-40 my-2">
-              Castelobruxo
-            </button>
-          </div>
-        </div>
-        <div>
-          <Image
-            src="/balai.png"
-            alt="footer"
-            width={240}
-            height={65}
-            className="absolute bottom-10 left-20 cursor-pointer"
-          />
-        </div>
-      </form>
+      <div className="global-ask flex flex-wrap justify-around">
+        <button className="py-2 px-4 text-4xl border solid w-40 my-2">
+          <Link href="/hermione-ask">Hermione</Link>
+        </button>
+        <button className="py-2 px-4 text-4xl border solid w-40 my-2">
+          <Link href="/harry-ask">Harry</Link>
+        </button>
+        <button className="py-2 px-4 text-4xl border solid w-40 my-2">
+          <Link href="/ron-ask">Ron</Link>
+        </button>
+      </div>
+      <div>
+        <Image
+          src="/balai.png"
+          alt="footer"
+          width={240}
+          height={65}
+          className="absolute bottom-10 left-20 cursor-pointer"
+        />
+      </div>
     </>
   );
 }
 
-export default GlobalAsk;
+export default Harry;

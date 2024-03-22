@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-function Harry() {
+function Hermione() {
   return (
     <>
       <div>
@@ -27,26 +28,23 @@ function Harry() {
         </p>
       </div>
       <form action="">
-        <div className="answer-harry flex justify-around">
-          <button className="py-2 px-4 text-4xl border solid w-40 my-2">
-            Poudlard
-          </button>
-          <button className="py-2 px-4 text-4xl border solid w-40 my-2">
-            Beauxbâtons
-          </button>
-        </div>
+        <label className="flex flex-col items-center text-4xl answer-hermione">
+          Votre réponse: <input name="answer-hermione" />
+        </label>
         <div>
-          <Image
-            src="/balai.png"
-            alt="footer"
-            width={240}
-            height={65}
-            className="absolute bottom-10 left-20 cursor-pointer"
-          />
+          <Link href="/answer">
+            <Image
+              src="/balai.png"
+              alt="footer"
+              width={240}
+              height={65}
+              className="absolute bottom-10 left-20 cursor-pointer"
+            />
+          </Link>
         </div>
       </form>
     </>
   );
 }
 
-export default Harry;
+export default Hermione;

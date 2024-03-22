@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-function Hermione() {
+function RonAsk() {
   return (
     <>
       <div>
@@ -27,21 +28,27 @@ function Hermione() {
         </p>
       </div>
       <form action="">
-        <button className="answer-ron py-2 px-4 text-4xl border solid w-40">
-          Poudlard
-        </button>
+        <div className="global-answer flex flex-wrap justify-around">
+          <div>
+            <button className="py-2 px-4 text-4xl border solid w-40 my-2">
+              Castelobruxo
+            </button>
+          </div>
+        </div>
         <div>
-          <Image
-            src="/balai.png"
-            alt="footer"
-            width={240}
-            height={65}
-            className="absolute bottom-10 left-20 cursor-pointer"
-          />
+          <Link href="/answer">
+            <Image
+              src="/balai.png"
+              alt="footer"
+              width={240}
+              height={65}
+              className="absolute bottom-10 left-20 cursor-pointer"
+            />
+          </Link>
         </div>
       </form>
     </>
   );
 }
 
-export default Hermione;
+export default RonAsk;
